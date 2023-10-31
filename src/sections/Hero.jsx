@@ -1,6 +1,7 @@
 import { arrowRight } from "../assets/icons"
 import { bigShoe1 } from "../assets/images"
 import Button from "../components/Button"
+import ShoeCard from "../components/ShoeCard"
 import { statistics } from "../constants"
 
 const Hero = () => {
@@ -45,6 +46,20 @@ const Hero = () => {
         className="object-contain relative z-10"
       />
     </div>
+
+
+    <div>
+    {shoes.map((shoe)=> (
+      <div key = {shoe}>
+      <ShoeCard 
+        imgURL={shoe}
+        changeBigShoeImage={() => {}}
+        bigShoeImg=""
+      />
+      </div>
+    ))}
+    </div>
+
     </section>
   )
 }
